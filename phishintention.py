@@ -57,14 +57,14 @@ class PhishIntentionWrapper:
 
             # If no element is reported
             if pred_boxes is None or len(pred_boxes) == 0:
-                print('No element is detected, reporte as benign')
+                print('No element is detected, report as benign')
                 return phish_category, pred_target, matched_domain, plotvis, siamese_conf, \
                             str(awl_detect_time) + '|' + str(logo_match_time) + '|' + str(crp_class_time) + '|' + str(crp_locator_time), \
                             pred_boxes, pred_classes
 
             logo_pred_boxes, _ = find_element_type(pred_boxes, pred_classes, bbox_type='logo')
             if logo_pred_boxes is None or len(logo_pred_boxes) == 0:
-                print('No logo is detected, reporte as benign')
+                print('No logo is detected, report as benign')
                 return phish_category, pred_target, matched_domain, plotvis, siamese_conf, \
                             str(awl_detect_time) + '|' + str(logo_match_time) + '|' + str(crp_class_time) + '|' + str(crp_locator_time), \
                             pred_boxes, pred_classes
