@@ -26,6 +26,8 @@ fvcore = "*"
 lxml = "*"
 psutil = "*"
 Pillow  = "8.4.0"
+isort = ">=7.0.0,<8"
+black = ">=25.1.0,<26"
 
 [pypi-dependencies]
 "editdistance" = "*"
